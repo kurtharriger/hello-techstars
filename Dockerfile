@@ -19,7 +19,7 @@ ENV FLASK_ENV=${FLASK_ENV}
 
 # Conditionally use Gunicorn or Flask's built-in server
 CMD if [ "$FLASK_ENV" = "production" ]; then \
-        exec gunicorn -b 0.0.0.0:5000 app:app; \
+        exec gunicorn -b 0.0.0.0:5001 app:app; \
     else \
         exec python app.py; \
     fi
